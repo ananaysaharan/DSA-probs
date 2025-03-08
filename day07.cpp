@@ -35,10 +35,10 @@ public:
             for (int a=0;a<k;a++) {
                 sum+=nums[a];
             }
-            if(sum<minsum && sum>0) minsum=sum;
+           minsum=min(sum,minsum);
             while(k<n) {
                 sum+=nums[k++]-nums[j++];
-                if(sum<minsum && sum>0) minsum=sum;
+                minsum=min(sum,minsum);
             }
             
         }
