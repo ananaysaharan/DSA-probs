@@ -3,10 +3,6 @@
 //SC O(N)
 
 
-#include <vector>
-#include <queue>
-using namespace std;
-
 class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
