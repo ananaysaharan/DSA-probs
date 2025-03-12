@@ -5,14 +5,14 @@
 class Solution {
 public:
     
-    int binomialCoeff(int n, int k) {
-        long long res = 1;
-        if (k > n - k)
-            k = n - k;
+    int binomialCoeff(int n,int k) {
+        long long res=1;
+        if(k>n-k)
+            k=n-k;
         
-        for (int i = 0; i < k; ++i) {
-            res *= (n - i);
-            res /= (i + 1);
+        for(int i=0;i<k;++i) {
+            res*=(n-i);
+            res/=(i+1);
         }
         return res;
     }
@@ -20,10 +20,10 @@ public:
     vector<vector<int>> generate(int numRows) {
         vector<vector<int>> res;
         
-        for (int n = 0; n < numRows; ++n) {
+        for(int n=0;n<numRows;++n) {
             vector<int> row;
-            for (int k = 0; k <= n; ++k) {
-                row.push_back(binomialCoeff(n, k)); 
+            for(int k=0;k<=n;++k) {
+                row.push_back(binomialCoeff(n,k)); 
             }
             res.push_back(row);
         }
